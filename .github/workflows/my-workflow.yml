@@ -18,5 +18,5 @@ jobs:
 
       - name: repeat-joke
         run: echo "$JOKE"
-        env:
+        with:
           JOKE: "${{ steps.joke.outputs.joke-output }}"
