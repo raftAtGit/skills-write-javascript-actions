@@ -11,8 +11,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: ha-ha
         uses: ./.github/actions/joke-action
+        id: joke
 
       - name: repeat-joke
-        run: echo "${{ joke-output }}"
+        run: echo "${{ steps.joke.joke-output }}"
