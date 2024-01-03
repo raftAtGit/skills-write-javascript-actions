@@ -9,6 +9,9 @@ jobs:
   action:
     if: ${{ !github.event.repository.is_template }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        name: ['raftik', 'hakan', '999']
 
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +20,7 @@ jobs:
         uses: ./.github/actions/joke-action
         id: joke
         with:
-          name: raftik
+          name: ${{ matrix.name }}
 
       - name: repeat-joke
         run: echo "$JOKE"
