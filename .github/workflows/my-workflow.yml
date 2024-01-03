@@ -1,6 +1,7 @@
 name: JS Actions
 
 on:
+  workflow_dispatch:
   issues:
     types: [labeled]
 
