@@ -16,6 +16,8 @@ jobs:
       - name: ha-ha
         uses: ./.github/actions/joke-action
         id: joke
+        with:
+          name: raftik
 
       - name: repeat-joke
         run: echo "$JOKE"
