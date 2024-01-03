@@ -8,3 +8,9 @@ async function run() {
 }
 
 run();
+
+const name_input = core.getInput('name');
+const name_envVar = process.env.INPUT_NAME;
+
+console.log(`name from input: ${name_input}`)
+console.log(`name from env var: ${name_envVar}`)
