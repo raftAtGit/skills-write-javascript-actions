@@ -12,6 +12,8 @@ jobs:
     strategy:
       matrix:
         name: ['raftik', 'hakan', '999']
+        sex: ['male']
+        location: ['istanbul', 'riga', 'amsterdam']
 
     steps:
       - uses: actions/checkout@v4
