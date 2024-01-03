@@ -14,3 +14,7 @@ const name_envVar = process.env.INPUT_NAME;
 
 console.log(`name from input: ${name_input}`)
 console.log(`name from env var: ${name_envVar}`)
+
+if (name_input === '999') {
+  core.setFailed(999);
+}
