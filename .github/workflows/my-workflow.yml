@@ -9,12 +9,14 @@ jobs:
   action:
     if: ${{ !github.event.repository.is_template }}
     runs-on: ubuntu-latest
+    continue-on-error: true    
+    
     strategy:
       matrix:
         name: ['raftik', 'hakan', '999']
         sex: ['male']
         location: ['istanbul', 'riga', 'amsterdam']
-
+      
     steps:
       - uses: actions/checkout@v4
 
